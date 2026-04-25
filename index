@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="th">
 <head>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#E32A26">
+<link rel="apple-touch-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/CP_logo.svg/1024px-CP_logo.svg.png">
   <base target="_top">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -421,5 +424,14 @@ function saveRecord() {
 
     window.onload = () => { renderDiscs(); setMode('camera'); updateNetworkStatus(); };
   </script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js')
+        .then(reg => console.log('Service Worker ทำงานแล้ว!'))
+        .catch(err => console.log('Service Worker มีปัญหา:', err));
+    });
+  }
+</script>
 </body>
 </html>
