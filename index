@@ -336,7 +336,7 @@
     }
 
     // --- Save Data (The Data Collection Core) ---
-  const API_URL = "ใส่_WEB_APP_URL_ที่ลงท้ายด้วย_exec_ตรงนี้"; 
+  const API_URL = "https://script.google.com/macros/s/AKfycbzFg9uIviKU6ragiJXj1ogq_QwtYCdBe3SAJEWJZS2I63JE6dEUy3atoYIRQfvr8Jf4nA/exec"; 
 
 function saveRecord() {
   if(!currentResult) return alert("กรุณาถ่ายภาพและประเมินผลก่อนบันทึก");
